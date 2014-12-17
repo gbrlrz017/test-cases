@@ -3,9 +3,9 @@ Test Cases
 
 **What is a “test case”?**
 
-	The IEEE defines test case writing as “Documentation specifying inputs, predicted results, and a set of execution conditions for a test item.” And the computer scientist and author, Glenn Meyers, says that a test case is “a process of executing a program with the intent of finding an error.” A test case essentially checks that a program works as it should.
+The IEEE defines test case writing as “Documentation specifying inputs, predicted results, and a set of execution conditions for a test item.” And the computer scientist and author, Glenn Meyers, says that a test case is “a process of executing a program with the intent of finding an error.” A test case essentially checks that a program works as it should.
 
-	Finding and fixing _bugs_ is an important part of the programming process. A bug you didn't know existed can come back to haunt you later. For example, consider NASA's Mars Climate Orbiter which, in 1998, was tasked with looking for water and studying the weather on Mars. Apparently, some of its programmers had been working in SI units while others had been working in English units. The result from this lack of communication was a _bug_ that made the thrusters 4.45 times more powerful than they should have been. This $327.6 million project was consequently lost in space, most likely in pieces. 
+Finding and fixing _bugs_ is an important part of the programming process. A bug you didn't know existed can come back to haunt you later. For example, consider NASA's Mars Climate Orbiter which, in 1998, was tasked with looking for water and studying the weather on Mars. Apparently, some of its programmers had been working in SI units while others had been working in English units. The result from this lack of communication was a _bug_ that made the thrusters 4.45 times more powerful than they should have been. This $327.6 million project was consequently lost in space, most likely in pieces. 
 
 No program is ever perfect (not even those that NASA writes). But a good programmer makes a habit out of making sure her or his program is as bugless as possible.
 
@@ -86,9 +86,9 @@ The main idea behind writing test cases is to be as effective and to the point a
 - Use a test case template for documentation:
   - This should be a minimally complicated part of the test case writing process. It is an important part nonetheless. Done correctly, documentation of test cases will increase efficiency by allowing focus on actually coming up with test scenarios and by being a quick reference when needed later.
 
-![alt tag](https://cloud.githubusercontent.com/assets/9201839/5465285/62b87146-8549-11e4-9cfd-293e35ce1dc8.png)
+![screenshot from 2014-12-17 01 26 31](https://cloud.githubusercontent.com/assets/9201839/5469090/32cb6676-858c-11e4-99a3-2ff32a382fdb.png)
 
-	The above template allows the tester to document test cases and useful information that goes along with them in a clean fashion.
+The above template allows the tester to document test cases and useful information that goes along with them in a clean fashion.
 
 - Description: This column gives a brief explanation of the test case. It should be easy to read and understand for you and others who may look at it later.
 - Commands: These are the command that is being tested. Ideally, these will not be neither redundant nor overly complex.
