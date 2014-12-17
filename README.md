@@ -31,15 +31,18 @@ The aim of test case writing is to separate a program into small, important unit
 
 **Test Design Strategies:**
 
-These design strategies should be implemented where appropriate.
+These following are useful strategies for test case writing.
 
 - Branch Coverage Test Design: Testing is devised with decision making points in the source code in mind. A decision point is a place that may include a conditional `if` or `else` statement, a `while` loop, or some function or chunk of code where a the program changes course (_branches off_). This method is effective when all the important decision point combinations are tested.
-  - Talk about my reasoning for '&' '||' operators in rshell program.
+
+  - Possible decision points and branching off may occur when your program decides how to handle the `child` and `parent` processes when the connectors `;`, `||`, or `&&` are used. `ls || pwd` should only execute one command or the other (the first that doesn't fail) but not both, while `ls && pwd` executes both commands as long as the first one doesn't fail, and `ls ; pwd` attempts to execute both commands. 
 
 - Equivalence Class Partitioning: Think of an equivalence class as a set of test values that are similar enough that it is sufficient to test one or two and determine that the rest work, too. This style of testing eliminates redundancy, allowing the tester to move on to another part of testing.
+
   - For example, if `ls` by itself works then `pwd` and most other _bash_ commands should work by theirselves should work. You could therefore move on to an equivalence class that includes _flags_ and _arguments_ for a command, such as `cmd [flags] [args]`. 
 
 - Boundary Value Test Design: This strategy is used when the tester is aware of bugs in the program for certain test values. The boundary around those buggy test values is tested in order to determine the extent of the problem.
+
   - Consider a bug with the command `ls;pwd` in your shell. It is likely an issue with your **_parsing_** method or your **_forking_** method and **_child process_** handling. Boundary test values will therefore include 
     - different spacing between commands and connectors: `ls ; pwd`, `ls; pwd`, `ls ;pwd`, and `ls    ;     pwd`. It may not seem like it, but these are likely to cause trouble. 
     - varying amounts of chained commands: `ls; pwd; ls -a dir; ….` where each chained command should be executed by a separate process. 
@@ -47,19 +50,16 @@ These design strategies should be implemented where appropriate.
 
 - Function: Test each function and feature in isolation.
 
-- Domain: Test by partitioning different sets of values (different combinations)
-
 - Specification Based: Test functionality against existing specifications. For example, ask “What does the Bash do?” Check what _Bash_ does then run that same test on your shell.
 
 - Risk Based: In this approach, the tester attempts to break the program in order to get an idea of what still needs work.
+  
   - For example, say I am implementing `ls` (second homework assignment). I know `ls -a -l -R` works fine, but do `ls -alR` or `ls file1 -la file2 file3 -R file4` work? The latter two are more likely to find an issue. 
 
 - Negative Test Cases: Test whether the program _does not_ do things that it _shouldn't_. The tester looks for any funny behavior in the program. These tests check whether you have to appropriate error checking and error messages.
-  - For one of my homework assignments, I was tasked with implementing the `cd` command. Everything worked great when I had the usual `cd dir1`, but when I had `cd` by itself or `cd dir1 dir2 ...` my entire shell crashed. It turns out I had and `exit(1)` in my code of the user gave anything other than one argument for `cd`. 
- Appropriate error checking for system calls and `perror` messages are important: Make a test case in which the `exec*()` , `readir()`, `stat()`, `dup()` and other functions/system calls will fail
-
-- Exploratory: The tester runs some tests, digests the resulting information, and proceeds with new and better test cases. Keeping track of test cases is important here. 
-- Scenario: These tests are based on scenarios that are likely to come up. 
+  
+  - For one of my homework assignments, I was tasked with implementing the `cd` command. Everything worked great when I had the usual `cd dir`, but when I had `cd` by itself or `cd dir1 dir2 ...` my entire shell crashed. It turns out I accidentally called `exit(1)` in my code if the user gave anything other than one argument for `cd`. 
+  - Appropriate error checking for system calls and `perror` messages are important: Make a test case in which `exec*()` , `readir()`, `stat()`, `dup()` and other functions/system calls will fail.
 
 Combining two or more of these approaches  at a time is likely to yield good results.
 
