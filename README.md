@@ -105,6 +105,6 @@ Here is an example of how to fill in the test table. The program in question imp
 ![screenshot from 2014-12-16 23 38 46](https://cloud.githubusercontent.com/assets/9201839/5468045/e78666d8-857d-11e4-945e-3cbc836670c2.png)
 ![screenshot from 2014-12-16 23 39 01](https://cloud.githubusercontent.com/assets/9201839/5468060/0ea8e5a6-857e-11e4-973c-e43116386799.png)
 
-Notice the trend in the failed test cases: _parsing_ fails when connectors have no spacing between them and other text, like "..-f**&&**ls...". Having it all documented allows the tester to see the extent of the problem: it is a problem with all three connectors, `;` `||` and `&&`, which are can be considered _boundary values_.
+Notice the trend in the failed test cases: _parsing_ fails when connectors have no spacing between them and other text, like "..-f**&&**ls...". Having it all documented allows the tester to see the extent of the problem: the issue extend to all three connectors, `;` `||` and `&&`, which can be considered _boundary values_.
 
 Writing test cases requires some creativity on the tester's part, but they shouldn't be the most difficult part of creating a command shell. The above tips and tools will help make this a bit easier.
