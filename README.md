@@ -87,5 +87,17 @@ get all the background you need.. sys calls etc. (insert old words here)
 
 Here is an example of how to fill in the test table. The program here implements a basic version of the _Bash command shell_ using `execvp`, `fork`, and `waitpid`. This was an  [assignment](https://github.com/mikeizbicki/ucr-cs100/blob/cs100-2014fall/assignments/hw/hw0-rshell/README.md) for my software construction class. 
 
+![screenshot from 2014-12-16 23 38 05](https://cloud.githubusercontent.com/assets/9201839/5468037/df8d176a-857d-11e4-9f61-4a18ecafcc2d.png)
+![screenshot from 2014-12-16 23 38 46](https://cloud.githubusercontent.com/assets/9201839/5468045/e78666d8-857d-11e4-945e-3cbc836670c2.png)
+![screenshot from 2014-12-16 23 39 01](https://cloud.githubusercontent.com/assets/9201839/5468060/0ea8e5a6-857e-11e4-973c-e43116386799.png)
+
+
+
+
+
+
+
+
+
 
 
