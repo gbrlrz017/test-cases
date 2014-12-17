@@ -83,3 +83,7 @@ get all the background you need.. sys calls etc. (insert old words here)
 	(list column titles of table)
 
 ![alt tag](https://cloud.githubusercontent.com/assets/9201839/5465285/62b87146-8549-11e4-9cfd-293e35ce1dc8.png)
+
+
+Here is an example of how to fill in the test table. The program here implements a basic version of the _Bash command shell_ using `execvp`, `fork`, and `waitpid`. This was an  [assignment](https://github.com/mikeizbicki/ucr-cs100/blob/cs100-2014fall/assignments/hw/hw0-rshell/README.md).
+
